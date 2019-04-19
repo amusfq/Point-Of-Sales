@@ -1,0 +1,39 @@
+﻿<Window
+    x:Class="Point_Of_Sales.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Point_Of_Sales"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="1366"
+    Height="768"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+    <DockPanel>
+        <StackPanel
+            Height="50"
+            Background="#FF0293BD"
+            DockPanel.Dock="Top"
+            Orientation="Horizontal">
+            <TextBlock
+                Margin="15"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Selamat Datang, " />
+            <TextBlock
+                Margin="15"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Jumat, 19 April 2019" />
+        </StackPanel>
+        <Frame
+            x:Name="mainFrame"
+            Padding="20"
+            NavigationUIVisibility="Hidden" />
+    </DockPanel>
+</Window>

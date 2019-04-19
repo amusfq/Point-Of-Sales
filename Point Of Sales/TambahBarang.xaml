@@ -1,0 +1,52 @@
+﻿<Window
+    x:Class="Point_Of_Sales.TambahBarang"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Point_Of_Sales"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Tambah Barang"
+    Width="317.404"
+    Height="281.59"
+    Background="White"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <StackPanel Margin="10" Orientation="Vertical">
+        <TextBlock
+            Margin="0,0,0,10"
+            FontSize="14"
+            Text="ID Barang" />
+        <TextBox
+            x:Name="text_id"
+            Height="25"
+            Margin="0,0,0,10"
+            FontSize="14" />
+        <TextBlock
+            Margin="0,0,0,10"
+            FontSize="14"
+            Text="Nama Barang" />
+        <TextBox
+            x:Name="text_nama"
+            Height="25"
+            Margin="0,0,0,10"
+            FontSize="14" />
+        <TextBlock
+            Margin="0,0,0,10"
+            FontSize="14"
+            Text="Harga Barang" />
+        <TextBox
+            x:Name="text_harga"
+            Height="25"
+            Margin="0,0,0,10"
+            FontSize="14" />
+        <Button
+            x:Name="btnAdd"
+            Height="30"
+            Background="#FF0293BD"
+            Click="BtnAdd_Click"
+            Content="Tambah"
+            FontWeight="Bold"
+            Foreground="White" />
+    </StackPanel>
+</Window>
