@@ -103,6 +103,68 @@
                     </Button>
                 </StackPanel>
             </GroupBox>
+            <GroupBox
+                Width="241"
+                Height="147"
+                Margin="25,25,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="14"
+                FontWeight="Bold"
+                Header="Laporan">
+                <StackPanel Orientation="Horizontal">
+                    <Button
+                        x:Name="btnlaporanPenjualan"
+                        Width="100"
+                        Height="100"
+                        Margin="10,10,0,0"
+                        Padding="5,1"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="#FF0293BD"
+                        Cursor="Hand"
+                        Foreground="White">
+                        <StackPanel>
+                            <Image
+                                Height="60"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Cursor="Hand"
+                                Source="Resources/laporanPenjualan.png" />
+                            <TextBlock
+                                FontSize="11"
+                                Text="Laporan Penjualan"
+                                TextAlignment="Center"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Button>
+                    <Button
+                        x:Name="btnLaporanPembelian"
+                        Width="100"
+                        Height="100"
+                        Margin="10,10,0,0"
+                        Padding="5,1"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="#FF0293BD"
+                        Cursor="Hand"
+                        Foreground="White">
+                        <StackPanel>
+                            <Image
+                                Height="60"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Cursor="Hand"
+                                Source="Resources/laporanPembelian.png" />
+                            <TextBlock
+                                FontSize="11"
+                                Text="Laporan Pembelian"
+                                TextAlignment="Center"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </GroupBox>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
             <GroupBox
@@ -125,6 +187,7 @@
                         VerticalAlignment="Top"
                         Background="#FF0293BD"
                         Cursor="Hand"
+                        Click="BtnPenjualan_Click"
                         Foreground="White">
                         <StackPanel>
                             <Image
@@ -242,68 +305,6 @@
                     </Button>
                 </StackPanel>
             </GroupBox>
-            <GroupBox
-                Width="241"
-                Height="147"
-                Margin="25,25,10,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                FontSize="14"
-                FontWeight="Bold"
-                Header="Laporan">
-                <StackPanel Orientation="Horizontal">
-                    <Button
-                        x:Name="btnlaporanPenjualan"
-                        Width="100"
-                        Height="100"
-                        Margin="10,10,0,0"
-                        Padding="5,1"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Background="#FF0293BD"
-                        Cursor="Hand"
-                        Foreground="White">
-                        <StackPanel>
-                            <Image
-                                Height="60"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Cursor="Hand"
-                                Source="Resources/laporanPenjualan.png" />
-                            <TextBlock
-                                FontSize="11"
-                                Text="Laporan Penjualan"
-                                TextAlignment="Center"
-                                TextWrapping="Wrap" />
-                        </StackPanel>
-                    </Button>
-                    <Button
-                        x:Name="btnLaporanPembelian"
-                        Width="100"
-                        Height="100"
-                        Margin="10,10,0,0"
-                        Padding="5,1"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Background="#FF0293BD"
-                        Cursor="Hand"
-                        Foreground="White">
-                        <StackPanel>
-                            <Image
-                                Height="60"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Cursor="Hand"
-                                Source="Resources/laporanPembelian.png" />
-                            <TextBlock
-                                FontSize="11"
-                                Text="Laporan Pembelian"
-                                TextAlignment="Center"
-                                TextWrapping="Wrap" />
-                        </StackPanel>
-                    </Button>
-                </StackPanel>
-            </GroupBox>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
             <GroupBox
@@ -352,6 +353,7 @@
                         VerticalAlignment="Top"
                         Background="#FF0293BD"
                         Cursor="Hand"
+                        Click="BtnExit_Click"
                         Foreground="White">
                         <StackPanel>
                             <Image

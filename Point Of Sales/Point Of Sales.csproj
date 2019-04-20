@@ -61,6 +61,12 @@
     <Compile Include="Pages\Barang.xaml.cs">
       <DependentUpon>Barang.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Member.xaml.cs">
+      <DependentUpon>Member.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Penjualan.xaml.cs">
+      <DependentUpon>Penjualan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TambahBarang.xaml.cs">
       <DependentUpon>TambahBarang.xaml</DependentUpon>
     </Compile>
@@ -81,6 +87,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\Barang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Member.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Penjualan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +148,9 @@
   <ItemGroup>
     <Resource Include="Resources\back.png" />
     <Resource Include="Resources\backHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\no_image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

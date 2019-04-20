@@ -25,6 +25,7 @@
                 Foreground="White"
                 Text="Selamat Datang, " />
             <TextBlock
+                x:Name="textTanggal"
                 Margin="15"
                 FontSize="16"
                 FontWeight="Bold"

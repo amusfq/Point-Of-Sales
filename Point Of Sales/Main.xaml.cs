@@ -32,12 +32,22 @@ namespace Point_Of_Sales
 
         private void BtnMember_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Pages.Member());
         }
 
         private void BtnSupplier_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void BtnPenjualan_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.Penjualan());
+        }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

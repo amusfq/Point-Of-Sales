@@ -8,135 +8,129 @@
     Title="Barang"
     Width="auto"
     Height="auto"
-    d:DesignHeight="450"
     d:DesignWidth="800"
     Background="White"
     mc:Ignorable="d">
-    <StackPanel Orientation="Vertical">
-        <Grid Margin="0,0,0,10">
-            <StackPanel HorizontalAlignment="Left">
-                <Image
-                    x:Name="btnBack"
-                    Width="30"
-                    Cursor="Hand"
-                    MouseDown="BtnBack_MouseDown"
-                    Source="/Point Of Sales;component/Resources/back.png" />
-            </StackPanel>
-            <StackPanel
-                HorizontalAlignment="Right"
+<StackPanel Orientation="Vertical">
+    <Grid Margin="0,0,0,10">
+        <StackPanel HorizontalAlignment="Left">
+            <Image
+                x:Name="btnBack"
+                Width="30"
+                Cursor="Hand"
+                MouseDown="BtnBack_MouseDown"
+                Source="/Point Of Sales;component/Resources/back.png" />
+        </StackPanel>
+        <StackPanel
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+            <TextBlock
+                Margin="0,0,5,0"
                 VerticalAlignment="Center"
-                Orientation="Horizontal">
+                FontSize="14"
+                Text="Cari" />
+            <TextBox
+                x:Name="textSearch"
+                Width="200"
+                Height="30"
+                Padding="5,0"
+                FontSize="16"
+                KeyUp="TextSearch_KeyUp" />
+        </StackPanel>
+    </Grid>
+    <DataGrid
+        x:Name="dataGrid"
+        Height="300"
+        Margin="0,0,0,10"
+        AutoGenerateColumns="False"
+        ColumnWidth="*"
+        FontSize="16"
+        IsReadOnly="True"
+        SelectedCellsChanged="DataGrid_SelectedCellsChanged">
+        <DataGrid.Columns>
+            <DataGridTextColumn Binding="{Binding id_barang}" Header="ID Barang" />
+            <DataGridTextColumn Binding="{Binding nama_barang}" Header="Nama Barang" />
+            <DataGridTextColumn Binding="{Binding harga}" Header="Harga Barang" />
+            <DataGridTextColumn Binding="{Binding image}" Header="Image" />
+        </DataGrid.Columns>
+    </DataGrid>
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Vertical">
+            <Image
+                x:Name="image_barang"
+                Width="130"
+                Height="100"
+                Margin="0,0,10,5"
+                Source="/Point Of Sales;component/Resources/no_image.png"
+                Stretch="UniformToFill" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox
+                    x:Name="text_image"
+                    Width="100"
+                    Height="25"
+                    Margin="0,0,5,0"
+                    Padding="5,3,5,0"
+                    IsReadOnly="True"
+                    Text="No Image" />
+                <Button
+                    x:Name="btnSelectImg"
+                    Width="25"
+                    Height="25"
+                    Click="BtnSelectImg_Click"
+                    Content="..."
+                    IsEnabled="False" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                 <TextBlock
+                    Width="90"
                     Margin="0,0,5,0"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="Cari" />
+                    Text="ID Barang" />
                 <TextBox
-                    x:Name="textSearch"
-                    Width="200"
-                    Height="30"
-                    Padding="5,0"
-                    FontSize="16"
-                    KeyUp="TextSearch_KeyUp" />
+                    x:Name="textId"
+                    Width="150"
+                    Height="25"
+                    IsEnabled="False" />
             </StackPanel>
-        </Grid>
-        <DataGrid
-            x:Name="dataGrid"
-            Height="300"
-            Margin="0,0,0,10"
-            AutoGenerateColumns="False"
-            ColumnWidth="*"
-            FontSize="16"
-            IsReadOnly="True"
-            SelectedCellsChanged="DataGrid_SelectedCellsChanged">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding id_barang}" Header="ID Barang" />
-                <DataGridTextColumn Binding="{Binding nama_barang}" Header="Nama Barang" />
-                <DataGridTextColumn Binding="{Binding harga}" Header="Harga Barang" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Vertical">
-                <StackPanel Margin="0,0,0,5" Orientation="Horizontal">
-                    <TextBlock
-                        Width="90"
-                        Margin="0,0,5,0"
-                        VerticalAlignment="Center"
-                        FontSize="14"
-                        Text="ID Barang" />
-                    <TextBox
-                        x:Name="textId"
-                        Width="150"
-                        Height="25"
-                        IsEnabled="False" />
-                </StackPanel>
-                <StackPanel Margin="0,0,0,5" Orientation="Horizontal">
-                    <TextBlock
-                        Width="90"
-                        Margin="0,0,5,0"
-                        VerticalAlignment="Center"
-                        FontSize="14"
-                        Text="Nama Barang" />
-                    <TextBox
-                        x:Name="textNama"
-                        Width="250"
-                        Height="25"
-                        IsEnabled="False" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Width="90"
-                        Margin="0,0,5,0"
-                        VerticalAlignment="Center"
-                        FontSize="14"
-                        Text="Harga Barang" />
-                    <TextBox
-                        x:Name="textHarga"
-                        Width="250"
-                        Height="25"
-                        IsEnabled="False" />
-                </StackPanel>
+            <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                <TextBlock
+                    Width="90"
+                    Margin="0,0,5,0"
+                    VerticalAlignment="Center"
+                    FontSize="14"
+                    Text="Nama Barang" />
+                <TextBox
+                    x:Name="textNama"
+                    Width="250"
+                    Height="25"
+                    IsEnabled="False" />
             </StackPanel>
-            <StackPanel
-                Margin="10,0,0,0"
-                VerticalAlignment="Bottom"
-                Orientation="Horizontal">
+            <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                <TextBlock
+                    Width="90"
+                    Margin="0,0,5,0"
+                    VerticalAlignment="Center"
+                    FontSize="14"
+                    Text="Harga Barang" />
+                <TextBox
+                    x:Name="textHarga"
+                    Width="250"
+                    Height="25"
+                    IsEnabled="False" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button
-                    x:Name="btnTambah"
+                    x:Name="btnDelete"
                     Width="100"
                     Height="25"
-                    Background="#FF0293BD"
-                    Click="BtnTambah_Click"
-                    Content="TAMBAH"
-                    FontWeight="Bold"
-                    Foreground="White" />
-                <Button
-                    x:Name="btnSimpan"
-                    Width="100"
-                    Height="25"
-                    Background="#FF0293BD"
-                    Click="BtnSimpan_Click"
-                    Content="SIMPAN"
-                    FontWeight="Bold"
-                    Foreground="White"
-                    Visibility="Collapsed" />
-                <Button
-                    x:Name="btnUbah"
-                    Width="100"
-                    Height="25"
-                    Background="#FF0293BD"
-                    Click="BtnUbah_Click"
-                    Content="UBAH"
-                    FontWeight="Bold"
-                    Foreground="White"
-                    Visibility="Collapsed" />
-                <Button
-                    x:Name="btnUpdate"
-                    Width="100"
-                    Height="25"
-                    Background="#FF0293BD"
-                    Click="BtnUpdate_Click"
-                    Content="UPDATE"
+                    Margin="5,0,0,0"
+                    Background="#FFF31600"
+                    Click="BtnDelete_Click"
+                    Content="DELETE"
                     FontWeight="Bold"
                     Foreground="White"
                     Visibility="Collapsed" />
@@ -152,17 +146,50 @@
                     Foreground="White"
                     Visibility="Collapsed" />
                 <Button
-                    x:Name="btnDelete"
+                    x:Name="btnUpdate"
                     Width="100"
                     Height="25"
                     Margin="5,0,0,0"
-                    Background="#FFF31600"
-                    Click="BtnDelete_Click"
-                    Content="DELETE"
+                    Background="#FF0293BD"
+                    Click="BtnUpdate_Click"
+                    Content="UPDATE"
                     FontWeight="Bold"
                     Foreground="White"
                     Visibility="Collapsed" />
+                <Button
+                    x:Name="btnUbah"
+                    Width="100"
+                    Height="25"
+                    Margin="5,0,0,0"
+                    Background="#FF0293BD"
+                    Click="BtnUbah_Click"
+                    Content="UBAH"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Visibility="Collapsed" />
+                <Button
+                    x:Name="btnSimpan"
+                    Width="100"
+                    Height="25"
+                    Margin="5,0,0,0"
+                    Background="#FF0293BD"
+                    Click="BtnSimpan_Click"
+                    Content="SIMPAN"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Visibility="Collapsed" />
+                <Button
+                    x:Name="btnTambah"
+                    Width="100"
+                    Height="25"
+                    Margin="5,0,0,0"
+                    Background="#FF0293BD"
+                    Click="BtnTambah_Click"
+                    Content="TAMBAH"
+                    FontWeight="Bold"
+                    Foreground="White" />
             </StackPanel>
         </StackPanel>
     </StackPanel>
+</StackPanel>
 </Page>
