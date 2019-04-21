@@ -58,6 +58,7 @@
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Barang.cs" />
     <Compile Include="Pages\Barang.xaml.cs">
       <DependentUpon>Barang.xaml</DependentUpon>
     </Compile>
@@ -69,6 +70,15 @@
     </Compile>
     <Compile Include="TambahBarang.xaml.cs">
       <DependentUpon>TambahBarang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\GetIDProduk.xaml.cs">
+      <DependentUpon>GetIDProduk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Kembalian.xaml.cs">
+      <DependentUpon>Kembalian.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Pembayaran.xaml.cs">
+      <DependentUpon>Pembayaran.xaml</DependentUpon>
     </Compile>
     <Page Include="Main.xaml">
       <SubType>Designer</SubType>
@@ -99,6 +109,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TambahBarang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Utils\GetIDProduk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Utils\Kembalian.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Utils\Pembayaran.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

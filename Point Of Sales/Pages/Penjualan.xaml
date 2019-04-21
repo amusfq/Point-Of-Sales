@@ -1,14 +1,15 @@
-﻿<Page x:Class="Point_Of_Sales.Pages.Penjualan"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Point_Of_Sales.Pages"
-      mc:Ignorable="d" 
-      Width="auto"
-      Height="auto"
-      Background="White"
-      Title="Penjualan">
+﻿<Page
+    x:Class="Point_Of_Sales.Pages.Penjualan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Point_Of_Sales.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Penjualan"
+    Width="auto"
+    Height="auto"
+    Background="White"
+    mc:Ignorable="d">
 
     <StackPanel Orientation="Vertical">
         <Grid Margin="0,0,0,10">
@@ -21,113 +22,351 @@
                     Source="/Point Of Sales;component/Resources/back.png" />
             </StackPanel>
         </Grid>
-        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+        <StackPanel Margin="0,0,0,20" Orientation="Horizontal">
             <StackPanel Margin="0,0,10,0">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="No Nota" FontWeight="Bold" Width="70" FontSize="14" VerticalAlignment="Center"/>
-                    <TextBox x:Name="textNoNota" Width="150" FontWeight="Bold" FontSize="14" Height="25" Padding="5,2" IsReadOnly="True"/>
+                    <TextBlock
+                        Width="70"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Text="No Nota" />
+                    <TextBox
+                        x:Name="textNoNota"
+                        Width="150"
+                        Height="25"
+                        Padding="5,2"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        IsReadOnly="True" />
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="Tanggal" FontWeight="Bold" Width="70" FontSize="14" VerticalAlignment="Center"/>
-                    <TextBox x:Name="textTanggal" Width="150" FontWeight="Bold" FontSize="14" Height="25" Padding="5,2" IsReadOnly="True"/>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock
+                        Width="70"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Text="Tanggal" />
+                    <TextBox
+                        x:Name="textTanggal"
+                        Width="150"
+                        Height="25"
+                        Padding="5,2"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        IsReadOnly="True" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Kasir" FontWeight="Bold" Width="70" FontSize="14" VerticalAlignment="Center"/>
-                    <TextBox x:Name="textNamaKasir" Width="150" FontWeight="Bold" FontSize="14" Height="25" Padding="5,2" IsReadOnly="True"/>
+                    <TextBlock
+                        Width="70"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Text="Kasir" />
+                    <TextBox
+                        x:Name="textNamaKasir"
+                        Width="150"
+                        Height="25"
+                        Padding="5,2"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        IsReadOnly="True" />
                 </StackPanel>
             </StackPanel>
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Customer" FontWeight="Bold" Width="110" FontSize="14" VerticalAlignment="Center"/>
-                    <ComboBox x:Name="tbCustomer" Width="150" FontWeight="Bold" FontSize="14" Height="25" Padding="5,0"/>
+                    <TextBlock
+                        Width="110"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Text="Customer" />
+                    <ComboBox
+                        x:Name="tbCustomer"
+                        Width="150"
+                        Height="25"
+                        Padding="5,0"
+                        FontSize="14"
+                        FontWeight="Bold" />
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="ID Member" FontWeight="Bold" Width="110" FontSize="14" VerticalAlignment="Center"/>
-                    <TextBox x:Name="textIdMember" Width="150" FontWeight="Bold" FontSize="14" Height="25" Padding="5,0" IsEnabled="False"/>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock
+                        Width="110"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Text="ID Member" />
+                    <TextBox
+                        x:Name="textIdMember"
+                        Width="150"
+                        Height="25"
+                        Padding="5,0"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        IsEnabled="False" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Nama Member" FontWeight="Bold" Width="110" FontSize="14" VerticalAlignment="Center"/>
-                    <TextBox x:Name="textNamaMember" Width="150" FontWeight="Bold" FontSize="14" Height="25" Padding="5,0" IsEnabled="False"/>
+                    <TextBlock
+                        Width="110"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Text="Nama Member" />
+                    <TextBox
+                        x:Name="textNamaMember"
+                        Width="150"
+                        Height="25"
+                        Padding="5,0"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        IsEnabled="False" />
                 </StackPanel>
             </StackPanel>
             <StackPanel Margin="10,0,0,0">
                 <StackPanel Background="#b6b6b6">
-                    <StackPanel Background="Black" Width="350" Height="68" Margin="8">
-                        <TextBlock x:Name="totalHarga" Text="10.000.000" Foreground="White" TextAlignment="Right" FontWeight="Bold" FontSize="40" Height="70" Padding="10,5"/>
+                    <StackPanel
+                        Width="350"
+                        Height="68"
+                        Margin="8"
+                        Background="Black">
+                        <TextBlock
+                            x:Name="totalHarga"
+                            Height="70"
+                            Padding="10,5"
+                            FontSize="40"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Text="Rp 0,-"
+                            TextAlignment="Right" />
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+        <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
             <StackPanel Margin="0,0,5,0">
-                <TextBlock Text="ID Produk" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="textIDProduk" Width="100" FontWeight="Bold" Padding="3,0"/>
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Text="ID Produk" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox
+                        x:Name="textIDProduk"
+                        Width="100"
+                        Margin="0,0,5,0"
+                        Padding="3,0"
+                        FontWeight="Bold"
+                        TextChanged="TextIDProduk_TextChanged" />
+                    <Button
+                        x:Name="btnGetID"
+                        Width="20"
+                        Background="#FF0293BD"
+                        Click="BtnGetID_Click"
+                        Content="..."
+                        Foreground="White" />
+                </StackPanel>
             </StackPanel>
             <StackPanel Margin="0,0,5,0">
-                <TextBlock Text="Nama Produk" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="textNamaProduk" Width="250" FontWeight="Bold" Padding="3,0"/>
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Text="Nama Produk" />
+                <TextBox
+                    x:Name="textNamaProduk"
+                    Width="220"
+                    Padding="3,0"
+                    FontWeight="Bold"
+                    IsReadOnly="True" />
             </StackPanel>
             <StackPanel Margin="0,0,5,0">
-                <TextBlock Text="Harga Satuan" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="textHargaSatuan" Width="100" FontWeight="Bold" Padding="3,0"/>
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Text="Harga Satuan" />
+                <TextBox
+                    x:Name="textHargaSatuan"
+                    Width="100"
+                    Padding="3,0"
+                    FontWeight="Bold"
+                    IsReadOnly="True"
+                    Text="0" />
             </StackPanel>
             <StackPanel Margin="0,0,5,0">
-                <GroupBox Header="Discount" FontSize="14" FontWeight="Bold">
+                <GroupBox
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Header="Discount">
                     <StackPanel Orientation="Horizontal">
-                        <TextBox x:Name="textDisc" Width="50" FontWeight="Bold" Padding="3,0"/>
-                        <TextBox x:Name="textHargaDisc" Width="100" FontWeight="Bold" Padding="3,0" TextAlignment="Right"/>
+                        <TextBox
+                            x:Name="textDisc"
+                            Width="50"
+                            Padding="3,0"
+                            FontWeight="Bold"
+                            Text="0%" />
+                        <TextBox
+                            x:Name="textHargaDisc"
+                            Width="100"
+                            Padding="3,0"
+                            FontWeight="Bold"
+                            IsReadOnly="True"
+                            Text="0"
+                            TextAlignment="Right" />
                     </StackPanel>
                 </GroupBox>
             </StackPanel>
             <StackPanel Margin="0,0,5,0">
-                <TextBlock Text="Qty" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="textQty" Width="40" FontWeight="Bold" Padding="3,0" TextAlignment="Right"/>
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Text="Qty" />
+                <TextBox
+                    x:Name="textQty"
+                    Width="40"
+                    Padding="3,0"
+                    FontWeight="Bold"
+                    Text="0"
+                    TextAlignment="Right"
+                    TextChanged="TextQty_TextChanged" />
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Subtotal" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="textSubtotal" Width="100" FontWeight="Bold" Padding="3,0" TextAlignment="Right"/>
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Text="Subtotal" />
+                <TextBox
+                    x:Name="textSubtotal"
+                    Width="100"
+                    Padding="3,0"
+                    FontWeight="Bold"
+                    IsReadOnly="True"
+                    Text="0"
+                    TextAlignment="Right" />
             </StackPanel>
             <StackPanel VerticalAlignment="Bottom">
-                <Button x:Name="btnTambah" Content="TAMBAH" Margin="5,10" Width="80" FontWeight="Bold" Background="#FF0293BD" Foreground="White"/>
+                <Button
+                    x:Name="btnTambah"
+                    Width="80"
+                    Margin="5,10"
+                    Background="#FF0293BD"
+                    Click="BtnTambah_Click"
+                    Content="TAMBAH"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    IsEnabled="False" />
             </StackPanel>
         </StackPanel>
-        <DataGrid Height="250" FontWeight="Bold" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,10">
+        <DataGrid
+            x:Name="dataGrid"
+            Height="250"
+            Margin="0,0,0,10"
+            AutoGenerateColumns="False"
+            FontWeight="Bold"
+            IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID PRODUK" Width="100"/>
-                <DataGridTextColumn Header="NAMA PRODUK" Width="280"/>
-                <DataGridTextColumn Header="HARGA SATUAN" Width="150"/>
-                <DataGridTextColumn Header="DISC" Width="80"/>
-                <DataGridTextColumn Header="QTY" Width="50"/>
-                <DataGridTextColumn Header="SUBTOTAL" Width="200"/>
+                <DataGridTextColumn
+                    Width="100"
+                    Binding="{Binding id_barang}"
+                    Header="ID PRODUK" />
+                <DataGridTextColumn
+                    Width="280"
+                    Binding="{Binding nama_barang}"
+                    Header="NAMA PRODUK" />
+                <DataGridTextColumn
+                    Width="150"
+                    Binding="{Binding harga}"
+                    Header="HARGA SATUAN" />
+                <DataGridTextColumn
+                    Width="80"
+                    Binding="{Binding disc}"
+                    Header="DISC" />
+                <DataGridTextColumn
+                    Width="50"
+                    Binding="{Binding qty}"
+                    Header="QTY" />
+                <DataGridTextColumn
+                    Width="200"
+                    Binding="{Binding subTotal}"
+                    Header="SUBTOTAL" />
             </DataGrid.Columns>
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
-                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                    <Setter Property="Background" Value="#FF0293BD"/>
-                    <Setter Property="Foreground" Value="#FFFFFF"/>
-                    <Setter Property="BorderBrush" Value="Black"/>
-                    <Setter Property="BorderThickness" Value="1"/>
-                    <Setter Property="Height" Value="25"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    <Setter Property="Background" Value="#FF0293BD" />
+                    <Setter Property="Foreground" Value="#FFFFFF" />
+                    <Setter Property="BorderBrush" Value="Black" />
+                    <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="Height" Value="25" />
                 </Style>
             </DataGrid.ColumnHeaderStyle>
         </DataGrid>
         <StackPanel HorizontalAlignment="Right">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Subtotal" Width="100" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="textSubtotalBawah" IsReadOnly="True" Width="200" FontWeight="Bold" Padding="3,0" TextAlignment="Right"/>
+                <TextBlock
+                    Width="100"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Text="Subtotal" />
+                <TextBox
+                    x:Name="textSubtotalBawah"
+                    Width="200"
+                    Padding="3,0"
+                    FontWeight="Bold"
+                    IsReadOnly="True"
+                    TextAlignment="Right" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="PPn" Width="100" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="textPPn" IsReadOnly="True" Width="200" FontWeight="Bold" Padding="3,0" TextAlignment="Right"/>
+            <StackPanel Margin="0,5" Orientation="Horizontal">
+                <TextBlock
+                    Width="100"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Text="PPn" />
+                <TextBox
+                    x:Name="textPPn"
+                    Width="200"
+                    Padding="3,0"
+                    FontWeight="Bold"
+                    IsReadOnly="True"
+                    TextAlignment="Right" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="TOTAL" Width="100" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="textTotal" IsReadOnly="True" Width="200" FontWeight="Bold" Padding="3,0" TextAlignment="Right"/>
+                <TextBlock
+                    Width="100"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Text="TOTAL" />
+                <TextBox
+                    x:Name="textTotal"
+                    Width="200"
+                    Padding="3,0"
+                    FontWeight="Bold"
+                    IsReadOnly="True"
+                    TextAlignment="Right" />
             </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-            <Button x:Name="btnBatal" Content="BATAL" Width="120" Height="30" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FFF10D0D" Margin="5,0,0,0"/>
-            <Button x:Name="btnbayar" Content="BAYAR" Width="120" Height="30" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF0293BD" Margin="5,0,0,0"/>
+        <StackPanel
+            Margin="0,20,0,0"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <Button
+                x:Name="btnBatal"
+                Width="120"
+                Height="30"
+                Margin="5,0,0,0"
+                Background="#FFF10D0D"
+                Content="BATAL"
+                FontSize="14"
+                FontWeight="Bold"
+                Foreground="White" />
+            <Button
+                x:Name="btnbayar"
+                Width="120"
+                Height="30"
+                Margin="5,0,0,0"
+                Background="#FF0293BD"
+                Click="Btnbayar_Click"
+                Content="BAYAR"
+                FontSize="14"
+                FontWeight="Bold"
+                Foreground="White" />
         </StackPanel>
     </StackPanel>
 </Page>
