@@ -1,2 +1,2 @@
 # Point-Of-Sales
-POS Application created with C#
+POS Desktop Application created with C#
